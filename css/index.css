@@ -1,0 +1,120 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-top: 10rem;
+  column-gap: 5%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-item img {
+  width: 100%;
+}
+
+.grid-item #login {
+  width: 100%;
+  padding: 20px;
+}
+
+#login div {
+  margin-bottom: 20px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#btnLogin {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btnLogin {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btnSignup {
+  width: 50%;
+  background-color: #1877f2;
+  color: white;
+  padding: 14px 20px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+}
+
+#btnCreate {
+  width: 50%;
+  background-color: #1877f2;
+  color: white;
+  padding: 14px 20px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+}
+
+.signUpBox {
+  margin-top: 20px;
+}
+
+#signupForm {
+  display: none;
+  position: absolute;
+  width: 30%;
+  background-color: white;
+  margin-left: 400px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#signupForm a {
+  text-decoration: none;
+  color: #333;
+}
+
+#close {
+  font-size: 20px;
+  text-align: end;
+  padding: 0px 10px 0px 0px;
+}
+
+#greyedout {
+  display:none;
+  position:absolute;
+  top:0;
+  margin:0;
+  /* From https://css.glass */
+  background: rgba(81, 74, 71, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0.9px);
+-webkit-backdrop-filter: blur(0.9px);
+  width: 100%;
+  height: 900px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>IM Chat</title>
+</head>
+
+<body>
+    <div id="greyedout">
+        </div>
+    <main>
+        <div id="signupForm">
+            <div id="close" onclick="closeSignupForm();"><a href="">X</a></div>
+            <h3>Opprett ny bruker</h3> 
+            <div>
+                <label>Navn:</label><br>
+                <input id="name" type="text">
+            </div>
+            <div>
+                <label>Skule:</label><br>
+                <input id="school" type="text">
+            </div>
+            <div>
+                <label>E-post:</label><br>
+                <input id="new_email" type="email">
+            </div>
+            <div>
+                <label>Passord: </label><br>
+                <input id="new_password" type="password">
+            </div>
+            <div class="signUpBox">
+                <button id="btnCreate" onclick="signUp()">Opprett bruker</button>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/im%20logo.jpg">
+                <h1>
+                    Velkommen til IM Chat
+                </h1>
+                <h2>Her kan du snakke med andre elever på IM linjer i heile landet.</h2>
+            </div>
+            <div class="grid-item">
+                <div id="login">
+                    <h3>Logg inn:</h3>
+                    <div>
+                        <label>E-post:</label><br>
+                        <input id="email" type="email">
+                    </div>
+                    <div>
+                        <label>Passord: </label><br>
+                        <input id="password" type="password">
+                    </div>
+                    <button id="btnLogin" onclick="login()">Logg inn</button>
+                    <hr>
+                    <div class="signUpBox">
+                        <button id="btnSignup" onclick="showSignupForm()">Opprett ny bruker</button>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+              
+        
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.messageBox {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    top: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.messages {
+    min-height: 600px;
+    width: 100%;
+    background-color: cadetblue;
+    border-radius: 5px;
+    padding-bottom:20px;
+}
+
+.createdDate {
+    text-align: right;
+    font-size: smaller;
+    color: #666;
+}
