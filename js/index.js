@@ -9,9 +9,7 @@ const firebaseApp = firebase.initializeApp({
 });
 const db = firebaseApp.firestore();
 
-async function getMessages() {
-    console.log("Hei");
-
+async function getWorkouts() {
     db.collection("week")
         .get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
@@ -67,7 +65,45 @@ async function getMessages() {
                             console.log("Error getting documents: ", error);
                         });
                 }
-
+                if (doc.data().day == "friday") {
+                    // doc.data() is never undefined for query doc snapshots
+                    db.collection("workouts").where("workoutId", "==", doc.data().workoutId)
+                        .get()
+                        .then((querySnapshot) => {
+                            querySnapshot.forEach((doc) => {
+                                document.getElementById("wo5").innerHTML = doc.data().title;
+                            });
+                        })
+                        .catch((error) => {
+                            console.log("Error getting documents: ", error);
+                        });
+                }
+                if (doc.data().day == "saturday") {
+                    // doc.data() is never undefined for query doc snapshots
+                    db.collection("workouts").where("workoutId", "==", doc.data().workoutId)
+                        .get()
+                        .then((querySnapshot) => {
+                            querySnapshot.forEach((doc) => {
+                                document.getElementById("wo6").innerHTML = doc.data().title;
+                            });
+                        })
+                        .catch((error) => {
+                            console.log("Error getting documents: ", error);
+                        });
+                }
+                if (doc.data().day == "sunday") {
+                    // doc.data() is never undefined for query doc snapshots
+                    db.collection("workouts").where("workoutId", "==", doc.data().workoutId)
+                        .get()
+                        .then((querySnapshot) => {
+                            querySnapshot.forEach((doc) => {
+                                document.getElementById("wo7").innerHTML = doc.data().title;
+                            });
+                        })
+                        .catch((error) => {
+                            console.log("Error getting documents: ", error);
+                        });
+                }
             });
         })
         .catch((error) => {
@@ -75,7 +111,7 @@ async function getMessages() {
         });
 }
 
-getMessages();
+getWorkouts();
 
 async function getWorkout(id) {
     db.collection("workouts").get().then((querySnapshot) => {
@@ -147,12 +183,13 @@ function like(id) {
 
 
 function setDone(id) {
-    
     if (document.getElementById(id).style.backgroundColor == "green") {
         document.getElementById(id).style.backgroundColor = "#d3d3d3";
+        document.getElementById(id).style.backgroundImage = "";
     }
     else {
         document.getElementById(id).style.backgroundColor = "green";
         document.getElementById(id).style.backgroundImage = "url('../images/done.svg')";
+        document.getElementById(id).style.backgroundSize = "cover";
     }
 }

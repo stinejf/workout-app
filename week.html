@@ -26,93 +26,66 @@
         <div class="workoutWeek" id="workouts">
             <div class="weekHeader">
                
-                <h4>Ukens treninger <a href="week.html"><img src="images/edit.svg"></a></h4>
+                <a href="/"><h4>Ukens treninger <img src="images/edit.svg"></h4></a>
             </div>
             <div class="workout">
-                <div class="done" id="done1" onclick="setDone('done1')"></div>
                 <div>
                     <div>
-                        <span>Mandag - </span>
-                        <span id="wo1"></span>
-                    </div>
-                    <div>
-                        <span>Varighet:</span>
+                        <span>Mandag</span>
+                        <select class="workoutList" id="test"></select>
                     </div>
                 </div>              
             </div>
             <div class="workout">
-                <div class="done" id="done2" onclick="setDone('done2')"></div>
                 <div>
                     <div>
-                        <span>Tirsdag - </span>
-                        <span id="wo2"></span>
-                    </div>
-                    <div>
-                        <span>Varighet:</span>
+                        <span>Tirsdag</span>
+                        <select class="workoutList"></select>
                     </div>
                 </div>      
 
             </div>
             <div class="workout">
-                <div class="done" id="done3" onclick="setDone('done3')"></div>
                 <div>
                     <div>
-                        <span>Onsdag - </span>
-                        <span id="wo3"></span>
-                    </div>
-                    <div>
-                        <span>Varighet:</span>
+                        <span>Onsdag</span>
+                        <select class="workoutList"></select>
                     </div>
                 </div>   
             </div>
             <div class="workout">
-                <div class="done" id="done4" onclick="setDone('done4')"></div>
                 <div>
                     <div>
-                        <span>Torsdag - </span>
-                        <span id="wo4"></span>
-                    </div>
-                    <div>
-                        <span>Varighet:</span>
+                        <span>Torsdag</span>
+                        <select class="workoutList"></select>
                     </div>
                 </div>   
             </div>
             <div class="workout">
-                <div class="done" id="done5" onclick="setDone('done5')"></div>
                 <div>
                     <div>
-                        <span>Fredag - </span>
-                        <span id="wo5"></span>
-                    </div>
-                    <div>
-                        <span>Varighet:</span>
+                        <span>Fredag</span>
+                        <select class="workoutList"></select>
                     </div>
                 </div>   
             </div>
             <div class="workout">
-                <div class="done" id="done6" onclick="setDone('done6')"></div>
                 <div>
                     <div>
-                        <span>Lørdag - </span>
-                        <span id="wo6"></span>
-                    </div>
-                    <div>
-                        <span>Varighet:</span>
+                        <span>Lørdag</span>
+                        <select class="workoutList"></select>
                     </div>
                 </div>   
             </div>
             <div class="workout">
-                <div class="done" id="done7" onclick="setDone('done7')"></div>
                 <div>
                     <div>
-                        <span>Søndag - </span>
-                        <span id="wo7"></span>
-                    </div>
-                    <div>
-                        <span>Varighet:</span>
+                        <span>Søndag</span>
+                        <select class="workoutList"></select>
                     </div>
                 </div>   
             </div>
+            <button onclick="saveWorkouts()">Lagre treningsveke</button>
         </div>
 
     </main>
@@ -121,7 +94,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/week.js"></script>
 </body>
 
 </html>

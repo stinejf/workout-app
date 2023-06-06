@@ -26,9 +26,6 @@ async function add() {
             window.location.href = "./home.html";
         })
 
-    console.log(res.userCredentials)
-
-
         .catch((err) => {
             alert(err.message)
             console.log(err.code);
