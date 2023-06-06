@@ -16,7 +16,7 @@ body  {
 }
 
 .headerImage {
-    background-image: url('/images/running.jpg');
+    background-image: url('../images/running.jpg');
     min-height: 200px;
     background-repeat: no-repeat;
     background-size: cover;
