@@ -15,15 +15,28 @@ async function add() {
     const title = document.getElementById("title").value;
     const desc = document.getElementById("description").value;
     const type = document.getElementById("type").value;
+    let i = 0; 
     
+    await db.collection("workouts").get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach(() => {
+            
+            i = i + 1;
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+    let newId = i+1;
     firebase.firestore().collection("workouts").doc().set({
         title: title,
         description: desc,
         type: type,
-        workoutId: id
+        workoutId: newId.toString()
     })
         .then(function () {
-            window.location.href = "./home.html";
+            window.location.href = "../index.html";
         })
 
         .catch((err) => {

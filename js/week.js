@@ -40,7 +40,7 @@ function saveWorkouts() {
             workoutId: workouts[i].value
         },{ merge: true })
             .then(function () {
-                window.location.href = "./index.html";
+                window.location.href = "../index.html";
             })    
     
             .catch((err) => {

@@ -11,41 +11,37 @@
 </head>
 
 <body>
-    <nav>
-        <div id="logo">
-
+    <div class="headerImage">
+        <div id="backIcon">
+            <a href="index.html"><img src="images/back.svg"></a>
         </div>
-        <div id="navlinks">
-            <a href="home.html">Heim</a>
-            <a href="about.html">Om denne sida</a>
-            <a href="profile.html">Min profil</a>
+        <div id="newIcon">
+            <a href="new.html"><img src="images/newItem.svg"></a>
         </div>
-    </nav>
+        <h1>Min treningsplan</h1>
+    </div>
     <main>
+        <div class="form">
+            <h2>Ny treningsøkt</h2>
 
-
-      
-            <div class="form"> 
-                <h2>Ny treningsøkt</h2>
-
-                <div class="form-group">
-                    <label for="title">Tittel:</label>
-                    <input type="text" id="title" name="title" required>
-                </div>
-                <div class="form-group">
-                    <label for="description">Beskrivelse:</label>
-                    <textarea id="description" name="description" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="type">Type</label>
-                    <select id="type" name="type">
-                        <option value="run">Løping</option>
-                        <option value="strength">Styrke</option>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Registrer" onclick="add()">
-                </div>
+            <div class="form-group">
+                <label for="title">Tittel:</label>
+                <input type="text" id="title" name="title" required>
             </div>
+            <div class="form-group">
+                <label for="description">Beskrivelse:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <select id="type" name="type">
+                    <option value="run">Løping</option>
+                    <option value="strength">Styrke</option>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrer" onclick="add()">
+            </div>
+        </div>
     </main>
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>

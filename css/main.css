@@ -2,17 +2,31 @@ body  {
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#backIcon {
+    float:left;
+    background-color: rgba(0,0,0,0.4);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 14px;
+}
+
+#backIcon img {
+    width: 100%;
+}
+
 #newIcon {
     float:right;
     background-color: rgba(0,0,0,0.4);
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    margin: 14px;
 }
 
 #newIcon img {
-    width: 40px;
-    height: 40px;
+    width: 100%;
 }
 
 .headerImage {
